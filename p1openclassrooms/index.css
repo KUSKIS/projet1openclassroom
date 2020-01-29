@@ -1,0 +1,906 @@
+@font-face {
+    font-family: 'robotobold';
+    src: url('webagency_images/fonts/Roboto-Bold-webfont.eot');
+    src: url('webagency_images/fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webagency_images/fonts/Roboto-Bold-webfont.woff2') format('woff2'),
+         url('webagency_images/fonts/Roboto-Bold-webfont.woff') format('woff'),
+         url('webagency_images/fonts/Roboto-Bold-webfont.ttf') format('truetype'),
+         url('webagency_images/fonts/Roboto-Bold-webfont.svg#robotobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'robotoregular';
+    src: url('webagency_images/fonts/Roboto-Regular-webfont.eot');
+    src: url('webagency_images/fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webagency_images/fonts/Roboto-Regular-webfont.woff2') format('woff2'),
+         url('webagency_images/fonts/Roboto-Regular-webfont.woff') format('woff'),
+         url('webagency_images/fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('webagency_images/fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/*------body-----*/
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*--------------nav--------------*/
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    height: 15vh;
+    width: 100%;
+    z-index: 10;
+    background-color: white;
+}
+nav ul{    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 1.5%;
+    padding-right: 10%;
+    margin-top: 1%;
+    padding-left: 38%;
+    list-style-type: none;
+    width: 30%;
+}
+/*nav li{
+    margin: 10%;
+}*/
+.lesservices, .portfolio, .lecontact{
+    text-decoration: none;
+    color: #8c8c8c;
+    font-size: 0.8em;
+    font-family: 'robotobold';
+}
+.lesservices:hover, .portfolio:hover, .lecontact:hover{
+    border-top: 2px solid #1ab2ff;
+    padding: 30px 15px 0 15px;
+    color: #595959;
+}
+.accueil{
+    text-decoration: none;
+    font-size: 0.8em;
+    font-family: 'robotobold';
+    border-top: 2px solid #1ab2ff;
+    padding: 30px 15px 0 15px;
+    color: #595959;
+}
+.logo{
+    padding-left: 10%;
+    padding-top: 1.5%;
+    height: 50%;
+}
+
+/*----------------header-------------------*/
+#home{
+    margin-top: 15vh;
+    position: relative;
+    width: 100%;
+}
+#home img{
+    width: 100%;
+}
+/*-------------texte dans l'image------------*/
+strong{
+    color: #1ab2ff;
+}
+.texte{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 28%;
+    left: 8%;
+}
+.texte h1{
+    font-size: 2.17em;
+    font-family: 'robotobold';
+    color: white;
+    line-height: 30px; 
+}
+.texte h2{
+    font-size: 0.77em;
+    font-family: 'robotoregular';
+    font-weight: bold;
+    color: white;
+    margin-top: 0%;
+    margin-bottom: 5%;
+}
+.infos{
+    text-decoration: none;
+    border-radius: 3px;
+    background-color: #1ab2ff;
+    box-shadow: 0px 4px 0px 0px rgba(68, 148, 187, 0.9);
+    font-size: 1em;
+    font-family: 'robotobold';
+    color: white;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    text-align: center;
+    width: 18%;
+}
+.infos:hover{
+    color: white;
+}
+
+/*-------------les bordures de l'image---------*/
+
+.border{
+    position: absolute;
+    bottom: 1%;
+    width: 10%;
+    border-bottom: 3.5px solid #1ab2ff;
+}
+.border_2{
+    position: absolute;
+    right: 0;
+    bottom: 1%;
+    width: 90%;
+    border-bottom: 3.5px solid rgba(0, 0, 0, 0.1);
+}
+
+/*-------------les chevrons---------------*/
+
+.chevronbox{
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+.chevronboxright{
+    position: absolute;
+    left: 97.5%;
+    bottom: 45%;
+}
+.chevronboxleft{
+    position: absolute;
+    bottom: 45%;
+}
+.circleleft{
+    position: relative;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    height: 60px;
+    width: 30px;
+}
+.circleleft .fa-chevron-left{
+    position: absolute;
+    top: 20px;
+    left: 8px;
+}
+.circleright{
+    position: relative;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    height: 60px;
+    width: 30px;
+}
+.circleright .fa-chevron-right{
+    position: absolute;
+    top: 20px;
+    right: 8px;
+}
+
+/*---------------section services------------*/
+
+#services{
+    width: 100%;
+    min-height: 110vh;
+    margin: 0;
+}
+.conteneur{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5%;
+}
+#services .contenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+/*---------------titre-----------------*/
+
+.nos_services{
+    position: relative;
+}
+.nos_services h2{
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 6%; 
+    margin-bottom: 4%;
+}
+.nos_services p{
+    color: #595959;
+    font-size: 1em;
+    line-height: 25px;
+    text-align: center;
+    margin-top: 2%;
+}
+.nos_services i{
+    position: absolute;
+    border: 1px solid rgba(0,0,0,0);
+    padding-left: 3px;
+    padding-right: 3px;
+    background-color: white;
+}
+.cerclebleu{
+    position: absolute;
+    left: 49.3%;
+    top: 36%;
+}
+#services hr{
+    width: 10%;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+    height: 1px;
+    overflow: visible;
+}
+#services h2{
+    font-family: 'robotobold';
+    line-height: 1px;
+}
+#services p{
+    font-family: 'robotoregular';
+    line-height: 20px;
+}
+
+/*------------------------le design-----------------*/
+
+#services img{
+    margin-left: 10%;
+    margin-bottom: 13%;
+}
+
+/*------------son texte------------*/
+
+#services ul{
+    list-style-type: none;
+}
+#services .texte_design p{
+    color: #595959;
+    font-size: 0.85em;
+    padding-right: 10%;
+}
+#services .texte_design li h2{
+    font-size: 1.2em;
+}
+
+/*------------les fa-------------*/
+
+.design{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.fa-chart-line, .fa-chart-pie, .fa-cubes, .fa-circle{
+    color: #1ab2ff;
+}
+.cercle1, .cercle2, .cercle3{
+    border-radius: 40px 40px 40px 40px;
+    border: 1px solid rgba(0,0,0,.1);
+    height: 40px; 
+    width: 40px;
+    text-align: center;
+    padding: 15px 15px 15px 15px;
+}
+.design .fa-circle{
+    border: 1px solid rgba(0,0,0,0);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: white;
+}
+.circle1 .fa_circle1, .circle2 .fa_circle2, .circle3 .fa_circle3{   
+    position: absolute;
+    left: 85%;
+    bottom: 35%;
+}
+.fa-chart-line, .fa-cubes, .fa-chart-pie{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+.cercle1, .cercle2, .cercle3{
+    position: relative;
+}
+.facercle1{
+    position: absolute;
+    top: 5%;
+    right: 97%;
+}
+.facercle2{
+    position: absolute;
+    top: 38%;
+    right: 97%;
+}
+.facercle3{
+    position: absolute;
+    top: 72%;
+    right: 97%;
+}
+
+/*-----------------section projets---------------------*/
+
+#projets{
+    background-color: #f2f2f2;
+    width: 100%;
+    min-height: 160vh;
+    margin: 0;
+    overflow: hidden;
+}
+.nos_projets{
+    position: relative;
+}
+.nos_projets h2{
+    font-family: 'robotobold';
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 4%; 
+    margin-bottom: 0;
+}
+.nos_projets hr{
+    width: 11%;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    height: 1px;
+    overflow: visible;
+}
+#projets .fa-circle{
+    position: absolute;
+    border: 5px solid white;
+    border-radius: 25px;
+}
+.cercleblanc{
+    position: absolute;
+    left: 49%;
+    top: 37%;
+}
+.nos_projets p{
+    font-family: 'robotoregular';
+    line-height: 25px;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 2%;
+}
+
+/*-----------------la barre---------------*/
+
+.barre ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    left: -1.5%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+#projets li a{
+    text-decoration: none;
+    font-family: 'robotobold';
+    font-size: 0.9em;
+    color: #595959;
+    background-color: #e6e6e6;
+}
+#projets .works{
+    padding: 10px 15px 10px 15px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    flex-grow: 1;
+    color: white;
+    background-color: #1ab2ff;
+    height: 16px;
+    box-shadow: 0px 3px 0px 0px rgba(68, 148, 187, 0.9);
+}
+#projets .creative, .corporate{
+    padding: 10px 15px 10px 15px;
+    background-color: #e6e6e6;
+    display: flex;
+    flex-grow: 1;
+}
+#projets .port_folio{
+    padding: 10px 15px 10px 15px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #e6e6e6;
+    display: flex;
+    flex-grow: 1;
+}
+#projets .creative_sort:hover .creative, #projets .corporate_sort:hover .corporate{
+    color: white;
+    background-color: #1ab2ff;
+    height: 16px;
+    box-shadow: 0px 3px 0px 0px rgba(68, 148, 187, 0.9);
+}
+#projets .portfolio_sort:hover .port_folio{
+    color: white;
+    background-color: #1ab2ff;
+    height: 16px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 3px 0px 0px rgba(68, 148, 187, 0.9);
+}
+#projets .sort1, .sort2, .sort3, .sort4{
+    position: relative;
+    bottom: 17px;
+    left: 1px;
+    color: #f2f2f2;
+}
+#projets .works_sort .sort1{
+    color: rgba(68, 148, 187, 0.9);
+}
+.creative_sort:hover .sort2, .corporate_sort:hover .sort3, .portfolio_sort:hover .sort4{
+    color: rgba(68, 148, 187, 0.9);
+}
+
+/*--------------box images-------------------*/
+
+.boximages{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0%;
+    width: 100%;
+}
+figure{
+    position: relative;
+    width: 260px;
+    height: 180px;
+    margin: 20px;
+}
+figure img{
+    width: 260px;
+    height: 180px; 
+}
+figure figcaption{
+    visibility: hidden;
+}
+figure:hover figcaption, .item4 figcaption{
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    position: absolute;
+    bottom: 0%;
+    height: 40%;
+    width: 260px;
+    box-sizing: border-box;
+    visibility: visible;
+}
+figcaption h3{
+    font-family: 'robotobold';
+    font-size: 1em;
+    text-align: left;
+    padding-left: 7%;
+}
+figcaption p{
+    font-family: 'robotoregular';
+    font-size: 1em;
+    padding-left: 7%;
+    margin-top: -5%;
+}
+.eye{      
+    position: absolute;
+    bottom: 80%;
+    left: 80%;
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    background-color: #1ab2ff;
+}
+.fa-eye{
+    position: relative;
+    left: 6px;
+    top: 7px;
+}
+
+/*-----------------footer-------------------*/
+
+iframe{
+    opacity: 0.5;
+    width: 100%;
+    height: 104vh;
+}
+.map{
+    background-color: rgb(173, 194, 235);
+    background-size: cover; 
+}
+#contact{
+    position: relative;
+}
+.formulaire{
+    position: absolute;
+    left: 60%;
+    bottom: 10%;
+    width: 300px;
+    height: 455px;
+    line-height: 20px;
+    font-family: 'robotobold';
+    border: none;
+    background: rgba(250, 250, 250, 0.8);
+}
+h2{
+    font-size: 1.4em;
+}
+p{
+    font-size: 0.8em;
+    line-height: 15px;
+}
+.texte_formulaire h3{
+    font-size: 0.8em;
+    margin-bottom: -10%;
+}
+.texte_formulaire p{
+    color: #595959;
+}
+.texte_formulaire b{
+    border-bottom: 1px dotted #595959;
+}
+.contenu_formulaire{
+    display: flex;
+    flex-direction: column;
+    line-height: 15px;
+}
+#nom{
+    margin-top: -15px;
+}
+#nom, #email, #sujet{
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    padding-left: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-family: 'robotoregular';
+    font-size: 0.8em;
+    color: #f2f2f2; 
+}
+#email, #sujet{
+    margin-top: -3px;
+}
+#message{
+    border-color: #d9d9d9;
+    padding-top: 2%;
+    border-radius: 5px;
+    padding-left: 3%;
+    font-family: 'robotoregular';
+}
+.bouton{
+    font-family: 'robotobold';
+    border: 2px solid #00aaff;
+    background-color: #1ab2ff;
+    border-radius: 3px;
+    color: white;
+    box-shadow: 0px 4px 0px 0px rgba(68, 148, 187, 0.9);
+}
+
+/*-------------------les medias-------------------*/
+
+@media screen and (max-width: 425px){
+    
+/* ---------------nav--------------- */
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul{
+        padding: 0;
+        margin-top: 0;
+        min-width: 90%;
+        margin-right: 2%;
+    }
+    .logo{
+        margin-top: 0;
+        padding-left: 0;
+    }
+    .lesservices:hover, .portfolio:hover, .lecontact:hover, .accueil{
+        border-top: none;
+        padding: 0;
+        color: #8c8c8c;
+    }
+    
+    /*----------header-----------*/
+
+    #home{
+        display: flex;
+        flex-direction: column;
+    }
+    .chevronbox, .border, .border_2, .hiddenmobile{
+        display: none;
+    }
+    .texte h1, .texte h2{
+        color: black;
+        text-align: center;
+    }
+    .texte{
+        position: relative;
+        left: 0;
+    }
+    .infos{
+        width: 30%;
+        margin-left: 35%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .texte h1{
+        margin-top: 15%;
+    }
+    .texte h2{
+        margin-top: 5%;
+    }
+
+    /*---------services---------*/
+
+    .nos_services hr{
+        display: none;
+    }
+    .nos_services{
+        margin-top: 20%;
+    }
+    .nos_services p{
+        margin-top: 20%;
+    }
+    .cerclebleu{
+        top: 26%;
+    }
+    .conteneur{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .image{
+        max-width: 100%;
+        position: relative;
+        right: 5%;
+    }
+    .facercle1, .facercle2, .facercle3{
+        left: 6%;
+    }
+    .texte_design{
+        margin-left: 20%;
+    }
+
+    /*--------projets------*/
+
+    .nos_projets hr{
+        display: none;
+    }
+    .nos_projets{
+        margin-top: 10%;
+    }
+    .nos_projets p{
+        margin-top: 10%;
+    }
+    .cercleblanc{
+        top: 28%;
+    }
+    .barre ul{
+        margin-top: 10%;
+        padding-left: 1.5%;
+        width: 100%;
+    }
+    #projets .works{
+        padding: 5px 5px 5px 5px;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+    #projets .creative, .corporate{
+        padding: 5px 5px 5px 5px;
+    }
+    #projets .port_folio{
+        padding: 5px 5px 5px 5px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+
+    /*-------footer---------*/
+
+    #contact{
+        background-color: rgb(173, 194, 235);
+    }
+    .formulaire{
+        position: relative;
+        left: 5%;
+        width: 80%;
+    }
+}
+@media only screen and (min-width: 426px) and (max-width: 768px){
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul{
+        padding: 0;
+        margin-top: 0;
+        min-width: 90%;
+        margin-right: 2%;
+    }
+    .logo{
+        margin-top: 0;
+        padding-left: 0;
+    }
+    .lesservices:hover, .portfolio:hover, .lecontact:hover, .accueil{
+        border-top: none;
+        padding: 0;
+        color: #8c8c8c;
+    }
+    /*----------header-----------*/
+
+    #home{
+        display: flex;
+        flex-direction: column;
+    }
+    .chevronbox, .border, .border_2, .hiddenmobile{
+        display: none;
+    }
+    .texte h1, .texte h2{
+        color: black;
+        text-align: center;
+    }
+    .texte{
+        position: relative;
+        left: 0;
+    }
+    .infos{
+        width: 30%;
+        margin-left: 35%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .texte h1{
+        margin-top: 15%;
+    }
+    .texte h2{
+        margin-top: 5%;
+    }
+
+    /*---------services---------*/
+
+    .nos_services hr{
+        display: none;
+    }
+    .nos_services{
+        margin-top: 20%;
+    }
+    .nos_services p{
+        margin-top: 20%;
+    }
+    .cerclebleu{
+        top: 26%;
+    }
+    .conteneur{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .image{
+        max-width: 100%;
+        position: relative;
+        right: 5%;
+    }
+    .facercle1, .facercle2, .facercle3{
+        left: 6%;
+    }
+    .texte_design{
+        margin-left: 20%;
+    }
+
+    /*--------projets------*/
+
+    .nos_projets hr{
+        display: none;
+    }
+    .nos_projets{
+        margin-top: 10%;
+    }
+    .nos_projets p{
+        margin-top: 10%;
+    }
+    .cercleblanc{
+        top: 28%;
+    }
+    .barre ul{
+        margin-top: 10%;
+        padding-left: 1.5%;
+        width: 100%;
+    }
+    #projets .works{
+        padding: 5px 5px 5px 5px;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+    #projets .creative, .corporate{
+        padding: 5px 5px 5px 5px;
+    }
+    #projets .port_folio{
+        padding: 5px 5px 5px 5px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+    .formulaire{
+        left: 50%;
+        top: 30%;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+    
+    nav ul{
+        margin-top: 3%;
+        padding-left: 20%;
+    }
+    .logo{
+        margin-top: 1%;
+    }
+    .chevronboxright{
+        left: 97%;
+    }
+    .texte{
+        top: 20%;
+    }
+    #services, #projets{
+        margin-top: 10%;
+    }
+    .conteneur{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .contenu{
+        margin-bottom: 15%;
+        margin-left: 15%;
+    }
+    .cerclebleu{
+        top: 33%;
+    }
+    #services img{
+        margin-left: 0;
+        margin-top: 10%;
+    }
+    .formulaire{
+        top: 20%;
+    }
+    
+}
+
+@media only screen and (width: 2560px){
+    
+    .chevronboxright{
+        left: 98.7%;
+    }
+    .cerclebleu{
+        top: 48%;
+    }
+    .cercleblanc{
+        top: 33%;
+    }
+    .barre{
+        position: relative;
+        left: 1%;
+    }
+    
+}
